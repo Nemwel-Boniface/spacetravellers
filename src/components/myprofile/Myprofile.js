@@ -3,7 +3,7 @@ import Populateprofile from '../populateprofile/Populateprofile';
 import './myprofile.css';
 
 const Myprofile = () => (
-  <div className='myProfile'>
+  <div className="myProfile">
     <section className="my-missions">
       <h2>My Mission</h2>
       <Populateprofile />

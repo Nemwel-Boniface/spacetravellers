@@ -2,9 +2,9 @@ import React from 'react';
 import './populateprofile.css';
 
 const Populateprofile = () => (
-  <div className='populate'>
+  <div className="populate">
     <span>Hello Profile!</span>
-    <hr/>
+    <hr />
   </div>
 );
 
