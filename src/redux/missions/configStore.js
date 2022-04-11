@@ -2,8 +2,8 @@ import { createStore, combineReducers } from 'redux';
 import missionReducer from './missions';
 
 const reducers = combineReducers({
-    missionReducer,
-})
+  missionReducer,
+});
 
 const store = createStore(reducers);
 
