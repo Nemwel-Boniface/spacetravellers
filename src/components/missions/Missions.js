@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 import './missions.css';
-import MissionDetails from './MissionDetails';
+import MissionDetails from '../missiondetails/MissionDetails';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missionReducer.missions, shallowEqual);
