@@ -1,4 +1,5 @@
 import React from 'react';
+import './populateprofile.css';
 
 const Populateprofile = () => (
   <>
