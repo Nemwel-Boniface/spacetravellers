@@ -6,7 +6,7 @@ const NavBar = () => (
   <nav>
     <span className="rocket">Rockets</span>
     <span className="missions">Missions</span>
-    <span className="profile">My Profile</span>
+    <span className="profile"><NavLink to="myprofile">My Profile</NavLink></span>
   </nav>
 );
 
