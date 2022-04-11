@@ -19,3 +19,6 @@ const missionReducer = (state = initialState, mission) => {
       return state;
   }
 };
+
+export { LoadMissions };
+export default missionReducer;
