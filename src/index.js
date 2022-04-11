@@ -6,13 +6,14 @@ import './index.css';
 import App from './App';
 import MyProfile from './components/myprofile/Myprofile';
 import reportWebVitals from './reportWebVitals';
+import Rockets from './components/Rockets/rockets';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Rockets />} />
         <Route path="/myprofile" element={<MyProfile />} />
       </Routes>
     </Router>
