@@ -1,10 +1,11 @@
 import React from 'react';
 import NavBar from './NavBar';
+import logo from '../planet.png';
 
 const Header = () => (
   <header>
     <div id="logo">
-      <img src="../../planets.png" alt="logo" />
+      <img src={logo} alt="logo" />
       <span>Space Travelers Hub</span>
     </div>
     <NavBar />
