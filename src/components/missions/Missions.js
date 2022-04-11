@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector, shallowEqual } from 'react-redux';
 
 const Missions = () => (
   <div className="mission-page">
