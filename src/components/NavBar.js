@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './navbar.css';
 
 const NavBar = () => (
   <nav>
-    <span className="rocket"><Link to="/">Rockets</Link></span>
-    <span className="missions"><Link to="/missions">Missions</Link></span>
-    <span className="profile"><Link to="/myprofile">My Profile</Link></span>
+    <span className="rocket">Rockets</span>
+    <span className="missions">Missions</span>
+    <span className="profile">My Profile</span>
   </nav>
 );
 
