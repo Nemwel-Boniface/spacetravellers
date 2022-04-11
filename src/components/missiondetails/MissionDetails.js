@@ -8,4 +8,4 @@ const MissionDetails = (name, dex) => (
   </div>
 );
 
-
+export default MissionDetails;
