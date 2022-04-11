@@ -8,6 +8,7 @@ import MyProfile from './components/myprofile/Myprofile';
 import reportWebVitals from './reportWebVitals';
 import Rockets from './components/Rockets/rockets';
 import Missions from './components/missions/Missions';
+import store from './redux/configStore';
 
 ReactDOM.render(
   <React.StrictMode>
