@@ -1,1 +1,2 @@
-export const FETCHROCKETS = 'FETCHROCKETS';
+const FETCHROCKETS = 'FETCHROCKETS';
+export default FETCHROCKETS;

@@ -1,13 +1,15 @@
-import * as actions from './actionTypes';
+import FETCHROCKETS from './actionTypes';
 
 const baseURL = 'https://api.spacexdata.com/v3/rockets';
 
-let initialRockets = [];
+const initialRockets = [];
 
 const RocketsRuducer = (state = initialRockets, action) => {
-  switch(action.type) {
-    case actions.FETCHROCKETS:
-      return [...action.payLoad];
+  switch (action.type) {
+    case FETCHROCKETS:
+      return [
+        ...action.payLoad,
+      ];
     default:
       return state;
   }
@@ -22,8 +24,7 @@ export const getRocketFromAPI = () => (dispatch) => fetch(baseURL)
         ...rocket,
       };
     });
-    dispatch({ type: actions.FETCHROCKETS, payLoad: rockets });
+    dispatch({ type: FETCHROCKETS, payLoad: rockets });
   }).catch(() => {});
-
 
 export default RocketsRuducer;
