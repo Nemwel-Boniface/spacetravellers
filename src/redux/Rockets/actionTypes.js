@@ -1,0 +1,2 @@
+const FETCHROCKETS = 'FETCHROCKETS';
+export default FETCHROCKETS;

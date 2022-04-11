@@ -2,6 +2,15 @@
   margin: auto 15px;
 }
 
+.navbar span a {
+  text-decoration: none;
+}
+
+.navbar span a:focus {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+
 .navbar .missions {
   padding-right: 10px;
   border-right: 1px solid #000;
