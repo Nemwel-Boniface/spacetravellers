@@ -1,12 +1,13 @@
 import React from 'react';
 import NavBar from './NavBar';
 
-const Header = () => {
+const Header = () => (
   <header>
     <div id="logo">
       <img src="../../planets.png" alt="logo" />
-      <span>Space Travelers' Hub</span>
+      <span>Space Travelers Hub</span>
     </div>
     <NavBar />
-  </header>;
-};
+  </header>
+);
+export default Header;
