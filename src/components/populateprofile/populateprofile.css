@@ -1,0 +1,13 @@
+.populate {
+  border: 1px solid #000;
+}
+.populate span {
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.populate hr {
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+  width: 100%;
+}

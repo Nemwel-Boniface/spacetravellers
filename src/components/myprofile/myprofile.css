@@ -1,0 +1,5 @@
+.myProfile {
+  margin: 5% 15% 0 15%;
+  display: flex;
+  justify-content: space-between;
+}
