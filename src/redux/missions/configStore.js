@@ -5,3 +5,4 @@ const reducers = combineReducers({
     missionReducer,
 })
 
+const store = createStore(reducers);
