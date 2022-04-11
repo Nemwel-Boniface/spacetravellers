@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
+import './missions.css';
 
-const Missions = () => (
-  <div className="mission-page">
-    <div className="mission-title"> Title </div>
-    <div className="mission-description">description</div>
-    <div className="mission-status">status</div>
-  </div>
-);
+const Missions = () => {
+  const missions = useSelector((state) => state.missionReducer.missions, shallowEqual);
+  return (
+    missions.map((mission) => (
+))
+  );
+};
 
 export default Missions;
