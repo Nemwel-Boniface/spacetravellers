@@ -6,6 +6,7 @@ import './index.css';
 import MyProfile from './components/myprofile/Myprofile';
 import reportWebVitals from './reportWebVitals';
 import Rockets from './components/Rockets/rockets';
+import Missions from './components/missions/Missions';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
       <Header />
       <Routes>
         <Route path="/" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} />
         <Route path="/myprofile" element={<MyProfile />} />
       </Routes>
     </Router>
