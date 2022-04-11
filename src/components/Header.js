@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './NavBar';
 
 const Header = () => {
   <header>
@@ -6,6 +7,6 @@ const Header = () => {
       <img src="../../planets.png" alt="logo" />
       <span>Space Travelers' Hub</span>
     </div>
-    
+    <NavBar />
   </header>;
 };
