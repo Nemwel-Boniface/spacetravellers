@@ -1,4 +1,4 @@
-import FETCHROCKETS from './actionTypes';
+import * as actions from './actionTypes';
 
 const baseURL = 'https://api.spacexdata.com/v3/rockets';
 
@@ -6,9 +6,21 @@ const initialRockets = [];
 
 const RocketsReducer = (state = initialRockets, action) => {
   switch (action.type) {
-    case FETCHROCKETS:
+    case actions.FETCHROCKETS:
       return [
         ...action.payLoad,
+      ];
+    case actions.BOOKROCKET:
+      return [...state.map((rocket) => {
+        if (rocket.id !== action.payLoad) return rocket;
+        return { ...rocket, reserved: true };
+      }),
+      ];
+    case actions.CANCELBOOKING:
+      return [...state.map((rocket) => {
+        if (rocket.id !== action.payLoad) return rocket;
+        return { ...rocket, reserved: false };
+      }),
       ];
     default:
       return state;
@@ -24,7 +36,17 @@ export const getRocketFromAPI = () => (dispatch) => fetch(baseURL)
       image: rocket.flickr_images[0],
       reserved: false,
     }));
-    dispatch({ type: FETCHROCKETS, payLoad: rockets });
+    dispatch({ type: actions.FETCHROCKETS, payLoad: rockets });
   }).catch(() => {});
+
+export const RocketBooking = (id) => ({
+  type: actions.BOOKROCKET,
+  payLoad: id,
+});
+
+export const CancelRocketBooking = (id) => ({
+  type: actions.CANCELBOOKING,
+  payLoad: id,
+});
 
 export default RocketsReducer;

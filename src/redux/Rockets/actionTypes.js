@@ -1,2 +1,3 @@
-const FETCHROCKETS = 'FETCHROCKETS';
-export default FETCHROCKETS;
+export const FETCHROCKETS = 'FETCHROCKETS';
+export const BOOKROCKET = 'bookRocket';
+export const CANCELBOOKING = 'CancelBooking';
