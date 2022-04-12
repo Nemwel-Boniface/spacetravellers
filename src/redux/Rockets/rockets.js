@@ -17,7 +17,13 @@ const RocketsReducer = (state = initialRockets, action) => {
         return { ...rocket, reserved: true };
       })
     ]
-
+    case actions.CANCELBOOKING:
+      return [...state.map(rocket => {
+        if(rocket.id !== action.payLoad)
+            return rocket;
+        return { ...rocket, reserved: false };
+        })
+      ]
     default:
       return state;
   }
@@ -43,6 +49,12 @@ export const RocketBooking = (id) => {
   }
 }
 
+export const CancelRocketBooking = (id) => {
+  return {
+    type: actions.CANCELBOOKING,
+    payLoad: id,
+  }
+}
 
 
 export default RocketsReducer;
