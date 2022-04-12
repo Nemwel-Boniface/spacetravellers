@@ -11,19 +11,17 @@ const RocketsReducer = (state = initialRockets, action) => {
         ...action.payLoad,
       ];
     case actions.BOOKROCKET:
-      return [...state.map(rocket => {
-        if(rocket.id !== action.payLoad)
-            return rocket;
+      return [...state.map((rocket) => {
+        if (rocket.id !== action.payLoad) return rocket;
         return { ...rocket, reserved: true };
-      })
-    ]
+      }),
+      ];
     case actions.CANCELBOOKING:
-      return [...state.map(rocket => {
-        if(rocket.id !== action.payLoad)
-            return rocket;
+      return [...state.map((rocket) => {
+        if (rocket.id !== action.payLoad) return rocket;
         return { ...rocket, reserved: false };
-        })
-      ]
+      }),
+      ];
     default:
       return state;
   }
@@ -41,20 +39,14 @@ export const getRocketFromAPI = () => (dispatch) => fetch(baseURL)
     dispatch({ type: actions.FETCHROCKETS, payLoad: rockets });
   }).catch(() => {});
 
+export const RocketBooking = (id) => ({
+  type: actions.BOOKROCKET,
+  payLoad: id,
+});
 
-export const RocketBooking = (id) => {
-  return {
-    type: actions.BOOKROCKET,
-    payLoad: id,
-  }
-}
-
-export const CancelRocketBooking = (id) => {
-  return {
-    type: actions.CANCELBOOKING,
-    payLoad: id,
-  }
-}
-
+export const CancelRocketBooking = (id) => ({
+  type: actions.CANCELBOOKING,
+  payLoad: id,
+});
 
 export default RocketsReducer;

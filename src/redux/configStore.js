@@ -4,7 +4,7 @@ import logger from 'redux-logger';
 import missionReducer from './missions/missions';
 import RocketsReducer from './Rockets/rockets';
 
-const MyMiddleWares = [thunk, logger]
+const MyMiddleWares = [thunk, logger];
 const reducers = combineReducers({
   missionReducer,
   RocketsReducer,

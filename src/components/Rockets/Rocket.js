@@ -13,12 +13,12 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
 
   const handleBooking = () => {
-    if(rocket.reserved) {
-      dispatch(CancelRocketBooking(rocket.id))
+    if (rocket.reserved) {
+      dispatch(CancelRocketBooking(rocket.id));
     } else {
-      dispatch(RocketBooking(rocket.id))
+      dispatch(RocketBooking(rocket.id));
     }
-  }
+  };
   return (
     <div id={id} className="rocket">
       <div className="rocketLeft">
@@ -39,6 +39,7 @@ Rocket.propTypes = {
     id: Proptypes.number.isRequired,
     description: Proptypes.string.isRequired,
     image: Proptypes.string.isRequired,
+    reserved: Proptypes.bool.isRequired,
   }).isRequired,
 };
 export default Rocket;
