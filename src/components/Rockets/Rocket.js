@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import Proptypes from 'prop-types';
 import './rockets.css';
 
 const Rocket = (props) => {
@@ -18,4 +18,13 @@ const Rocket = (props) => {
     </div>
   )
 }
+
+Rocket.propTypes = {
+  rocket: Proptypes.shape({
+    name: Proptypes.string.isRequired,
+    id: Proptypes.number.isRequired,
+    description: Proptypes.string.isRequired,
+    image: Proptypes.string.isRequired,
+  }).isRequired,
+};
 export default Rocket;
