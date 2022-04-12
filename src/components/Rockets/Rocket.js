@@ -2,7 +2,7 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import './rockets.css';
 import { useDispatch } from 'react-redux';
-import { RocketBooking } from '../../redux/Rockets/rockets';
+import { CancelRocketBooking, RocketBooking } from '../../redux/Rockets/rockets';
 
 const Rocket = (props) => {
   const { rocket } = props;
@@ -13,9 +13,12 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
 
   const handleBooking = () => {
-    dispatch(RocketBooking(rocket.id))
+    if(rocket.reserved) {
+      dispatch(CancelRocketBooking(rocket.id))
+    } else {
+      dispatch(RocketBooking(rocket.id))
+    }
   }
-  console.log(rocket)
   return (
     <div id={id} className="rocket">
       <div className="rocketLeft">
@@ -24,7 +27,7 @@ const Rocket = (props) => {
       <div className="rocketRight">
         <h2>{name}</h2>
         <p>{description}</p>
-        <button onClick={() => handleBooking()} id={id} type="button">Reserve Rocket</button>
+        <button onClick={handleBooking} id={id} type="button">Reserve Rocket</button>
       </div>
     </div>
   );
