@@ -6,9 +6,12 @@ import './index.css';
 import MyProfile from './components/myprofile/Myprofile';
 import reportWebVitals from './reportWebVitals';
 import Rockets from './components/Rockets/rockets';
+import { Provider } from 'react-redux';
+import store from './redux/configStore';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <Router>
       <Header />
       <Routes>
@@ -16,6 +19,7 @@ ReactDOM.render(
         <Route path="/myprofile" element={<MyProfile />} />
       </Routes>
     </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
