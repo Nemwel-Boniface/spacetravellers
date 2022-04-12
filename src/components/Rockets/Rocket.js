@@ -3,10 +3,17 @@ import PropTypes from 'prop-types';
 
 const Rocket = (props) => {
   const { rocket } = props;
-  const { name, type, flickr_images } = rocket;
+  const { id, name, description, image } = rocket;
   return (
-    <div className="rocket">
-
+    <div id={id} className="rocket">
+      <div className="rocketLeft">
+        <img src={image} alt="rocket"></img>
+      </div>
+      <div className="rocketRight">
+        <h2>{name}</h2>
+        <p>{description}</p>
+        <button id={id} type="button">Reserve Rocket</button>
+      </div>
     </div>
   )
 }

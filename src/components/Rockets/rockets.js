@@ -5,7 +5,7 @@ import { getRocketFromAPI } from '../../redux/Rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  const rockets = useSelector((state) => state.RocketsRuducer);
+  const rockets = useSelector((state) => state.RocketsReducer);
   useEffect(() => {
     dispatch(getRocketFromAPI())
   }, []);
@@ -14,7 +14,13 @@ const Rockets = () => {
     <div className="rockets">
       <ul>
         {rockets.map((rocket) => (
-          <Rocket key={rocket.id} rocket={rocket} />
+          <Rocket key={rocket.id}
+          rocket={rocket}
+          image={rocket.image}
+          description={rocket.description}
+          name={rocket.name}
+          reserved={rocket.reserved}
+          />
         ))}
       </ul>
     </div>
