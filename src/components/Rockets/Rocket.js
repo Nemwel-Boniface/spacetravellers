@@ -1,14 +1,16 @@
-import React from "react";
+import React from 'react';
 import Proptypes from 'prop-types';
 import './rockets.css';
 
 const Rocket = (props) => {
   const { rocket } = props;
-  const { id, name, description, image } = rocket;
+  const {
+    id, name, description, image,
+  } = rocket;
   return (
     <div id={id} className="rocket">
       <div className="rocketLeft">
-        <img src={image} alt="rocket"></img>
+        <img src={image} alt="rocket" />
       </div>
       <div className="rocketRight">
         <h2>{name}</h2>
@@ -16,8 +18,8 @@ const Rocket = (props) => {
         <button id={id} type="button">Reserve Rocket</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Rocket.propTypes = {
   rocket: Proptypes.shape({

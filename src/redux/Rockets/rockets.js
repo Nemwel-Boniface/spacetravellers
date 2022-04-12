@@ -15,18 +15,15 @@ const RocketsReducer = (state = initialRockets, action) => {
   }
 };
 
-
 export const getRocketFromAPI = () => (dispatch) => fetch(baseURL)
   .then((res) => res.json()).then((data) => {
-    const rockets = data.map((rocket) => {
-      return {
-        id: rocket.id,
-        name: rocket.rocket_name,
-        description: rocket.description,
-        image: rocket.flickr_images[0],
-        reserved: false,
-      };
-    });
+    const rockets = data.map((rocket) => ({
+      id: rocket.id,
+      name: rocket.rocket_name,
+      description: rocket.description,
+      image: rocket.flickr_images[0],
+      reserved: false,
+    }));
     dispatch({ type: FETCHROCKETS, payLoad: rockets });
   }).catch(() => {});
 

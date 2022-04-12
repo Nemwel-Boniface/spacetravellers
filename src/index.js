@@ -1,24 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Header from './components/header/Header';
 import './index.css';
 import MyProfile from './components/myprofile/Myprofile';
 import reportWebVitals from './reportWebVitals';
 import Rockets from './components/Rockets/rockets';
-import { Provider } from 'react-redux';
 import store from './redux/configStore';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Rockets />} />
-        <Route path="/myprofile" element={<MyProfile />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Rockets />} />
+          <Route path="/myprofile" element={<MyProfile />} />
+        </Routes>
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

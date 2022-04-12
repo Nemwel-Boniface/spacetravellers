@@ -9,6 +9,7 @@
 .rocket .rocketLeft {
   width: 25%;
 }
+
 .rocket .rocketLeft img {
   max-width: 100%;
 }
@@ -16,27 +17,32 @@
 .rocket .rocketRight {
   width: 65%;
 }
+
 .rocketRight h2 {
   margin-bottom: 20px;
 }
+
 .rocketRight p {
-  margin-bottom:  20px;
+  margin-bottom: 20px;
 }
+
 .rocketRight button {
-  background-color: #000099;
+  background-color: #009;
   color: #fff;
   padding: 10px;
   cursor: pointer;
   border: none;
   transition: 0.5s;
 }
+
 .rocketRight button:hover {
   background-color: #fff;
-  color: #000099;
-  border: 1px solid #000099;
+  color: #009;
+  border: 1px solid #009;
 }
+
 .rocketRight button:active {
-  background-color: #000099;
+  background-color: #009;
   color: #fff;
   border: none;
 }
