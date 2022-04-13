@@ -46,3 +46,34 @@
   color: #fff;
   border: none;
 }
+
+/* Styling for the reservation functionality */
+
+ .reservedbtn {
+  background-color: #009;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 9px;
+  color: #fff;
+}
+
+.rocketRight .cancelReserve {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+.rocketRight .cancelReserve:hover {
+  background-color: #fff;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.rocketRight .cancelReserve:active {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+}
