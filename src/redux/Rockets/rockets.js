@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type';
 import * as actions from './actionTypes';
 
 const baseURL = 'https://api.spacexdata.com/v3/rockets';
@@ -22,6 +23,10 @@ const RocketsReducer = (state = initialRockets, action) => {
         return { ...rocket, reserved: false };
       }),
       ];
+    case actions.ADDROCKETNAME:
+      return [
+        ...state.filter((rocket) => rocket.reserved === true)
+      ]
     default:
       return state;
   }
@@ -48,5 +53,10 @@ export const CancelRocketBooking = (id) => ({
   type: actions.CANCELBOOKING,
   payLoad: id,
 });
+
+export const addRocketToMyProfile = (id) => ({
+  type: actions.ADDROCKETNAME,
+  payLoad: id,
+})
 
 export default RocketsReducer;
