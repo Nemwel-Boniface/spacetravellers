@@ -25,17 +25,23 @@ const Rocket = (props) => {
         <img src={image} alt="rocket" />
       </div>
       <div className="rocketRight">
-      <h2>{name}</h2>
-        {rocket.reserved ?
-        <>
-        <p><small className='reservedbtn'>Reserved</small>{description}</p>
-        <button className='cancelReserve' onClick={handleBooking} id={id} type="button">Cancel Reservation</button>
-        </> :
-        <>
-        <p>{description}</p>
-        <button onClick={handleBooking} id={id} type="button">Reserve Rocket</button>
-        </>
-        }
+        <h2>{name}</h2>
+        {rocket.reserved
+          ? (
+            <>
+              <p>
+                <small className="reservedbtn">Reserved</small>
+                {description}
+              </p>
+              <button className="cancelReserve" onClick={handleBooking} id={id} type="button">Cancel Reservation</button>
+            </>
+          )
+          : (
+            <>
+              <p>{description}</p>
+              <button onClick={handleBooking} id={id} type="button">Reserve Rocket</button>
+            </>
+          )}
       </div>
     </div>
   );
