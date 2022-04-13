@@ -15,17 +15,15 @@ const Myprofile = () => {
     <div className="myProfile">
     <section className="my-missions">
       <h2>My Mission</h2>
-      <table className='reservedCont'>
-        <tbody>
-        {rockets.map((rocket) => (
-         <tr className='reservedItem' key={rocket.id}>{rocket.name}</tr>
-        ))}
-        </tbody>
-      </table>
+      <Populateprofile />
     </section>
     <section className="my-rockets">
-      <h2>My Rockets</h2>
-      <Populateprofile />
+    <h2>My Rockets</h2>
+    <ul className='reservedCont'>
+        {rockets.map((rocket) => (
+         <li className='reservedItem' key={rocket.id}>{rocket.name}</li>
+        ))}
+      </ul>
     </section>
   </div>
   )
