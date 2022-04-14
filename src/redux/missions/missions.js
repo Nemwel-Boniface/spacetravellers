@@ -13,12 +13,10 @@ const initialState = {
   ],
 };
 
-const missionReducer = (state = initialState, mission) => {
-  switch (mission.type) {
+const missionReducer = (state = initialState, action) => {
+  switch (action.type) {
     case LOAD_MISSIONS:
-      return {
-        ...state, missions: [...state.missions, mission.payload],
-      };
+      return [...action.payload];
     default:
       return state;
   }
