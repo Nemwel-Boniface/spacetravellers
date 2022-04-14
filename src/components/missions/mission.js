@@ -24,8 +24,8 @@ const Mission = (props) => {
         <tr id={id}>
         <td className='missionName'>{name}</td>
         <td>{description}</td>
-        <td><small className='missionBadge'>Active Member</small></td>
-        <td><button id={id} onClick={handleMissions} type='button'>Leave mission</button></td>
+        <td><small className='missionBadgeActive'>Active Member</small></td>
+        <td><button className='missionLeave' id={id} onClick={handleMissions} type='button'>Leave mission</button></td>
       </tr>
         </>
       ) : (

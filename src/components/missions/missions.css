@@ -27,14 +27,24 @@ table tr:nth-child(odd) {
 
 .missionBadge {
   background-color: darkgrey;
-  padding: 6px;
+  padding: 9px;
   color: #fff;
+  margin-left: 4px;
 }
 tr td button {
-  margin-left: 5px;
+  margin-left: 4px;
   border: 3px solid rgb(105,105,105);
   color: rgb(105,105,105);
-  padding: 8px;
+  padding: 5px;
   background: none;
   cursor: pointer;
+}
+
+.missionBadgeActive {
+  background-color: rgb(0, 153, 255);
+  color: #fff;
+}
+.missionLeave {
+  color: #f00;
+  border-color: #f00;
 }
