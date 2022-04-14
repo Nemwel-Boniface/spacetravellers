@@ -7,7 +7,7 @@ import './index.css';
 import MyProfile from './components/myprofile/Myprofile';
 import reportWebVitals from './reportWebVitals';
 import Rockets from './components/Rockets/rockets';
-import Missions from './components/missions/Missions';
+import App from './App';
 import store from './redux/configStore';
 
 ReactDOM.render(
@@ -17,7 +17,7 @@ ReactDOM.render(
         <Header />
         <Routes>
           <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<Missions />} />
+          <Route path="/missions" element={<App />} />
           <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
       </Router>

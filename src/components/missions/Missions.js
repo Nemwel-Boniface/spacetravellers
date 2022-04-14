@@ -4,7 +4,7 @@ import './missions.css';
 import MissionDetails from '../missiondetails/MissionDetails';
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missionReducer.missions, shallowEqual);
+  const missions = useSelector((state) => state.missionReducer, shallowEqual);
   return (
     missions.map((mission) => (
       <MissionDetails

@@ -1,11 +1,18 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import Missions from './components/missions/Missions';
+import { LoadMissions } from './redux/missions/missions';
 import './App.css';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(LoadMissions());
+  }, []);
+
   return (
-    <div className="App">
-      <h1>This is the boiler plates removed</h1>
-    </div>
+    <Missions />
   );
-}
+};
 
 export default App;
