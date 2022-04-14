@@ -1,6 +1,7 @@
 const LOAD_MISSIONS = 'spacetravellers/missions/missions';
 const JOINMISSIONS = 'spacetravellers/missions/joinMissions';
 const LEAVEMISSION = 'spacetravellers/missions/leaveMisions';
+const ADDMISSIONSNAME = 'spacetravellers/missions/AddMissionsName';
 
 const missionsURL = 'https://api.spacexdata.com/v3/missions';
 const initialState = [];
@@ -22,6 +23,10 @@ const missionReducer = (state = initialState, action) => {
         if (mission.id !== action.payLoad) return mission;
         return { ...mission, reserved: false };
       }),
+      ];
+    case ADDMISSIONSNAME:
+      return [
+        ...state.filter((mission) => mission.reserved === true),
       ];
     default:
       return state;
@@ -46,6 +51,11 @@ export const missionJoining = (id) => ({
 
 export const missionLeaving = (id) => ({
   type: LEAVEMISSION,
+  payLoad: id,
+});
+
+export const addMissionsToMyProfile = (id) => ({
+  type: ADDMISSIONSNAME,
   payLoad: id,
 });
 
