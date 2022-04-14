@@ -3,19 +3,26 @@ import { useDispatch, useSelector } from 'react-redux';
 import Populateprofile from '../populateprofile/Populateprofile';
 import './myprofile.css';
 import { addRocketToMyProfile } from '../../redux/Rockets/rockets';
+import { addMissionsToMyProfile } from '../../redux/missions/missions';
 
 const Myprofile = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.RocketsReducer);
+  const missions = useSelector((state) => state.missionReducer);
 
   useEffect(() => {
     dispatch(addRocketToMyProfile());
+    dispatch(addMissionsToMyProfile())
   }, []);
   return (
     <div className="myProfile">
       <section className="my-missions">
         <h2>My Mission</h2>
-        <Populateprofile />
+        <ul className="reservedCont">
+          {missions.map((mission) => (
+            <li className="reservedItem" key={mission.id}>{mission.name}</li>
+          ))}
+        </ul>
       </section>
       <section className="my-rockets">
         <h2>My Rockets</h2>
