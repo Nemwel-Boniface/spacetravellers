@@ -1,5 +1,7 @@
+import fetchMissions from '../../components/var_api/var_api';
+
 const LOAD_MISSIONS = 'spacetravellers/missions/missions';
-const LoadMissions = (dispatch) => {
+const LoadMissions = () => (dispatch) => {
   dispatch({ type: LOAD_MISSIONS });
 };
 
