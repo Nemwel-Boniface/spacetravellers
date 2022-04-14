@@ -1,24 +1,28 @@
 const LOAD_MISSIONS = 'spacetravellers/missions/missions';
-const LoadMissions = (dispatch) => {
-  dispatch({ type: LOAD_MISSIONS });
-};
 
-const initialState = {
-  missions: [
+const missionsURL = 'https://api.spacexdata.com/v3/missions';
+const initialState = []
 
-  ],
-};
-
-const missionReducer = (state = initialState, mission) => {
-  switch (mission.type) {
+const missionReducer = (state = initialState, action) => {
+  switch (action.type) {
     case LOAD_MISSIONS:
-      return {
-        ...state, missions: [...state.missions, mission.payload],
-      };
+      return [
+        ...action.payLoad,
+      ];
     default:
       return state;
   }
 };
 
-export { LoadMissions };
+export const getMissionsFromAPI = () => (dispatch) => fetch(missionsURL)
+.then((res) => res.json()).then((data) => {
+  const missions = data.map((mission) => ({
+    id: mission.mission_id,
+    name: mission.mission_name,
+    description: mission.description,
+    reserved: false,
+  }));
+  dispatch({ type: LOAD_MISSIONS, payLoad: missions });
+}).catch(() => {});
+
 export default missionReducer;
