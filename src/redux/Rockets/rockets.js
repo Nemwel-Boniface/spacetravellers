@@ -22,10 +22,6 @@ const RocketsReducer = (state = initialRockets, action) => {
         return { ...rocket, reserved: false };
       }),
       ];
-    case actions.ADDROCKETNAME:
-      return [
-        ...state.filter((rocket) => rocket.reserved === true),
-      ];
     default:
       return state;
   }
@@ -50,11 +46,6 @@ export const RocketBooking = (id) => ({
 
 export const CancelRocketBooking = (id) => ({
   type: actions.CANCELBOOKING,
-  payLoad: id,
-});
-
-export const addRocketToMyProfile = (id) => ({
-  type: actions.ADDROCKETNAME,
   payLoad: id,
 });
 

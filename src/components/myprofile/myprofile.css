@@ -1,23 +1,5 @@
 .myProfile {
-  margin: 5% 30px;
+  margin: 5% 15% 0 15%;
   display: flex;
-  gap: 30px;
-  width: 100%;
-}
-
-.my-rockets,
-.my-missions {
-  width: 45%;
-}
-
-.my-rockets ul {
-  display: block;
-  border: 1px solid #000;
-}
-
-.my-rockets ul li {
-  list-style-type: none;
-  margin: 0 0 0 -40px;
-  padding: 20px 20px;
-  border-bottom: 1px solid #000;
+  justify-content: space-between;
 }
