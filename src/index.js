@@ -18,7 +18,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Appjus />} />
           <Route path="/myprofile" element={<Appprofile />} />
-          <Route path="/mission" element={<Appmissions />} />
+          <Route path="/missions" element={<Appmissions />} />
         </Routes>
       </Router>
     </Provider>
