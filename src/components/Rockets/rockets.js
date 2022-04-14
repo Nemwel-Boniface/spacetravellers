@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import Proptypes from 'prop-types';
 import Rocket from './Rocket';
-import { getRocketFromAPI } from '../../redux/Rockets/rockets';
 
-const Rockets = () => {
-  const dispatch = useDispatch();
-  const rockets = useSelector((state) => state.RocketsReducer);
-  useEffect(() => {
-    dispatch(getRocketFromAPI());
-  }, []);
-
+const Rockets = (props) => {
+  const { rockets } = props;
   return (
     <div className="rockets">
       <ul>
@@ -27,5 +21,9 @@ const Rockets = () => {
     </div>
   );
 };
-
+Rockets.propTypes = {
+  rockets: Proptypes.arrayOf(
+    Proptypes.shape({}),
+  ).isRequired,
+};
 export default Rockets;
