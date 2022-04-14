@@ -1,3 +1,7 @@
+.navbar {
+  display: flex;
+}
+
 .navbar span {
   margin: auto 15px;
 }
