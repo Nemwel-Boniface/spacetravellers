@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Populateprofile from '../populateprofile/Populateprofile';
 import './myprofile.css';
 import { addRocketToMyProfile } from '../../redux/Rockets/rockets';
 import { addMissionsToMyProfile } from '../../redux/missions/missions';
@@ -12,7 +11,7 @@ const Myprofile = () => {
 
   useEffect(() => {
     dispatch(addRocketToMyProfile());
-    dispatch(addMissionsToMyProfile())
+    dispatch(addMissionsToMyProfile());
   }, []);
   return (
     <div className="myProfile">
