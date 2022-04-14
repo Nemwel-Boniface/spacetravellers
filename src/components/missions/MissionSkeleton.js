@@ -10,3 +10,5 @@ const MissionSkeleton = (name, description, status) => (
     <button type="button" className="mission-button">Join mission</button>
   </div>
 );
+
+export default MissionSkeleton;
