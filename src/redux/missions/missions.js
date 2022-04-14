@@ -8,7 +8,7 @@ const LoadMissions = () => (dispatch) => {
   });
 };
 
-const initialState = []
+const initialState = [];
 
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
