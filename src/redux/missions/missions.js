@@ -1,17 +1,14 @@
 import fetchMissions from '../../components/var_api/var_api';
 
 const LOAD_MISSIONS = 'spacetravellers/missions/missions';
+
 const LoadMissions = () => (dispatch) => {
   fetchMissions().then((mission) => {
     dispatch({ type: LOAD_MISSIONS, payload: mission });
   });
 };
 
-const initialState = {
-  missions: [
-
-  ],
-};
+const initialState = []
 
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
