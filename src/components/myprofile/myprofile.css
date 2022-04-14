@@ -10,12 +10,12 @@
   width: 45%;
 }
 
-.my-rockets ul {
+ul {
   display: block;
   border: 1px solid #000;
 }
 
-.my-rockets ul li {
+ul li {
   list-style-type: none;
   margin: 0 0 0 -40px;
   padding: 20px 20px;
