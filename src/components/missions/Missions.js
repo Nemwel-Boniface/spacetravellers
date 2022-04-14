@@ -5,13 +5,13 @@ import './missions.css';
 const Missions = (props) => {
   const { missions } = props;
   return (
-    <div className="missionss">
+    <div className="missions">
       <table>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th></th>
+        <tr className='H'>
+          <th className='missionHeader'>Mission</th>
+          <th className='missionDesc'>Description</th>
+          <th className='missionStatus'>Status</th>
+          <th className='missionBTNS'></th>
         </tr>
         <tbody>
         {missions.map((mission) => (

@@ -9,9 +9,9 @@ const Mission = (props) => {
   return (
     <>
       <tr id={id}>
-        <td>{name}</td>
+        <td className='missionName'>{name}</td>
         <td>{description}</td>
-        <td><small>Not a member</small></td>
+        <td><small className='missionBadge'>Not a member</small></td>
         <td><button type='button'>Join Mission</button></td>
       </tr>
     </>

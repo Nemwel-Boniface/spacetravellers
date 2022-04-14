@@ -1,5 +1,40 @@
 /* mission files */
-
+.missions {
+  margin: 5% 10%;
+}
 table, th, td {
   border:1px solid black;
+  border-collapse: collapse;
+}
+table tr th {
+  text-align: left;
+  padding: 10px;
+}
+table tr:nth-child(odd) {
+  background-color: rgba(211,211,211, 0.5);
+}
+.missionHeader, .missionStatus, .missionBTNS {
+  width: 10%;
+}
+.missionDesc {
+  width: 60%;
+}
+
+.missionName {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.missionBadge {
+  background-color: darkgrey;
+  padding: 6px;
+  color: #fff;
+}
+tr td button {
+  margin-left: 5px;
+  border: 3px solid rgb(105,105,105);
+  color: rgb(105,105,105);
+  padding: 8px;
+  background: none;
+  cursor: pointer;
 }
