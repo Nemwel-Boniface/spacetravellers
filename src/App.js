@@ -14,7 +14,7 @@ function App() {
   const missions = useSelector((state) => state.missionReducer, shallowEqual);
   useEffect(() => {
     dispatch(getRocketFromAPI());
-    dispatch(getMissionsFromAPI())
+    dispatch(getMissionsFromAPI());
   }, []);
   return (
     <div className="App">
