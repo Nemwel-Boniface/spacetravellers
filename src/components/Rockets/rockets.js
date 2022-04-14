@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Proptypes from 'prop-types';
 import Rocket from './Rocket';
-import { getRocketFromAPI } from '../../redux/Rockets/rockets';
 
 const Rockets = (props) => {
   const { rockets } = props;
@@ -21,5 +21,9 @@ const Rockets = (props) => {
     </div>
   );
 };
-
+Rockets.propTypes = {
+  rockets: Proptypes.arrayOf(
+    Proptypes.shape({}),
+  ).isRequired,
+};
 export default Rockets;
