@@ -1,4 +1,7 @@
 /* Will contain styling for the rockets component */
+.rockets {
+  margin: 0 9%;
+}
 
 .rocket {
   margin: 4% 0;

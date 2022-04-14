@@ -11,4 +11,6 @@
 
 #logo span {
   margin: auto 15px;
+  font-size: 24px;
+  font-weight: bold;
 }

@@ -1,5 +1,5 @@
 .myProfile {
-  margin: 5% 30px;
+  margin: 5% 80px;
   display: flex;
   gap: 30px;
   width: 100%;
@@ -10,12 +10,12 @@
   width: 45%;
 }
 
-ul {
+.profile ul {
   display: block;
   border: 1px solid #000;
 }
 
-ul li {
+.profile ul li {
   list-style-type: none;
   margin: 0 0 0 -40px;
   padding: 20px 20px;

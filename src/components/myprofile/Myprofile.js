@@ -15,7 +15,7 @@ const Myprofile = () => {
   }, []);
   return (
     <div className="myProfile">
-      <section className="my-missions">
+      <section className="profile my-missions">
         <h2>My Mission</h2>
         <ul className="reservedCont">
           {missions.map((mission) => (
@@ -23,7 +23,7 @@ const Myprofile = () => {
           ))}
         </ul>
       </section>
-      <section className="my-rockets">
+      <section className="profile my-rockets">
         <h2>My Rockets</h2>
         <ul className="reservedCont">
           {rockets.map((rocket) => (
