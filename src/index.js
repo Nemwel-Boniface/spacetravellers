@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/configStore';
-import App from './App';
+import Header from './components/header/Header';
+import Appjus from './Appjus';
+import Appprofile from './Appbus';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <App />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Appjus />} />
+          <Route path="/myprofile" element={<Appprofile />} />
+        </Routes>
       </Router>
     </Provider>
   </React.StrictMode>,
