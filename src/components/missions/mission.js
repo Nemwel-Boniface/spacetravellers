@@ -19,12 +19,27 @@ const Mission = (props) => {
   }
   return (
     <>
-      <tr id={id}>
+      {mission.reserved ? (
+        <>
+        <tr id={id}>
+        <td className='missionName'>{name}</td>
+        <td>{description}</td>
+        <td><small className='missionBadge'>Active Member</small></td>
+        <td><button id={id} onClick={handleMissions} type='button'>Leave mission</button></td>
+      </tr>
+        </>
+      ) : (
+        <>
+        <tr id={id}>
         <td className='missionName'>{name}</td>
         <td>{description}</td>
         <td><small className='missionBadge'>Not a member</small></td>
         <td><button id={id} onClick={handleMissions} type='button'>Join Mission</button></td>
       </tr>
+        </>
+      )
+
+      }
     </>
   );
 };
