@@ -8,6 +8,7 @@ import store from './redux/configStore';
 import Header from './components/header/Header';
 import Appjus from './Appjus';
 import Appprofile from './Appbus';
+import Appmissions from './Appmissions';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Appjus />} />
           <Route path="/myprofile" element={<Appprofile />} />
+          <Route path="/mission" element={<Appmissions />} />
         </Routes>
       </Router>
     </Provider>
