@@ -6,7 +6,7 @@ import { LoadMissions } from './redux/missions/missions';
 const Appmissions = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(LoadMissions());
+    if (document.querySelector('.mission-container').children.length === 0) { dispatch(LoadMissions()); }
   }, []);
 
   return (
