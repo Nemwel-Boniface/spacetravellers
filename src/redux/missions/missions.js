@@ -21,6 +21,11 @@ const LeaveMission = (id) => ({
   payload: id,
 });
 
+const PopulateMissionProfile = (id) => ({
+  type: POPULATE_MISSIONS_PROFILE,
+  payload: id,
+});
+
 const initialState = [];
 
 const missionReducer = (state = initialState, action) => {
@@ -35,10 +40,16 @@ const missionReducer = (state = initialState, action) => {
       return [
         ...state.map((mission) => (mission.id !== action.payload ? mission
           : { ...mission, reserved: false }))];
+    case POPULATE_MISSIONS_PROFILE:
+      return [
+        ...state.filter((mission) => mission.reserved === true),
+      ];
     default:
       return state;
   }
 };
 
-export { LoadMissions, JoinMission, LeaveMission };
+export {
+  LoadMissions, JoinMission, LeaveMission, PopulateMissionProfile,
+};
 export default missionReducer;
