@@ -14,15 +14,17 @@ const Missions = () => {
         <p className="status">Status</p>
         <p className="join">JOin</p>
       </div>
-      {missions.map((mission) => (
-        <MissionSkeleton
-          key={mission.id}
-          name={mission.name}
-          description={mission.description}
-          status={mission.reserved}
-          id={mission.id}
-        />
-      ))}
+      <div className="mission-container">
+        {missions.map((mission) => (
+          <MissionSkeleton
+            key={mission.id}
+            name={mission.name}
+            description={mission.description}
+            status={mission.reserved}
+            id={mission.id}
+          />
+        ))}
+      </div>
     </div>
   );
 };

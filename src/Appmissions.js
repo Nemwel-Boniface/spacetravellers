@@ -2,12 +2,11 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Missions from './components/missions/Missions';
 import { LoadMissions } from './redux/missions/missions';
-import fetchMissions from './components/var_api/var_api';
 
 const Appmissions = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    if (fetchMissions().length < 0) { dispatch(LoadMissions()); }
+    if (document.querySelector('.mission-container').children.length === 0) { dispatch(LoadMissions()); }
   }, []);
 
   return (
