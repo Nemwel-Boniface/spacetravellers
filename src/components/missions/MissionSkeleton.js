@@ -12,6 +12,8 @@ const MissionSkeleton = ({
   const missionParticipation = () => (
     status ? dispatch(JoinMission(id)) : dispatch(LeaveMission(id)));
   return (
+  <>  
+   {  (!status) ? ( 
     <div className="mission-table">
       <h2>{name}</h2>
       <p className="mission-description">
@@ -23,8 +25,21 @@ const MissionSkeleton = ({
         {status}
       </p>
       <button type="button" id={id} onClick={missionParticipation} className="mission-button">Join mission</button>
-    </div>
-  );
+    </div>) : null ( 
+    <div className="mission-table">
+      <h2>{name}</h2>
+      <p className="mission-description">
+        {description}
+      </p>
+      <p className="mission-status">
+        Active Member
+        {' '}
+        {status}
+      </p>
+      <button type="button" id={id} onClick={missionParticipation} className="mission-button">Leave mission</button>
+    </div>)
+  };
+  </>)
 };
 
 MissionSkeleton.propTypes = {
