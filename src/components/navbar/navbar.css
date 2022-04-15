@@ -8,6 +8,7 @@
 
 .navbar span a {
   text-decoration: none;
+  color: rgb(0, 153, 255);
 }
 
 .navbar span a:focus {
