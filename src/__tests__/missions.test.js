@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import store from '../redux/configStore';
-import Missions from '../components/Rockets/rockets';
+import Missions from '../components/missions/missions';
 
 describe('A tests for my Rockets component', () => {
   it('Check whether Rockets component renders', () => {
