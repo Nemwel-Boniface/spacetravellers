@@ -5,10 +5,14 @@ import './missions.css';
 const MissionSkeleton = ({ name, description, status }) => (
   <div className="mission-table">
     <h2>{name}</h2>
-    <div className="mission-description">
+    <p className="mission-description">
       {description}
-    </div>
-    <div className="mission-status">{status}</div>
+    </p>
+    <p className="mission-status">
+      Not a member
+      {' '}
+      {status}
+    </p>
     <button type="button" className="mission-button">Join mission</button>
   </div>
 );

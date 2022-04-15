@@ -9,7 +9,6 @@ const fetchMissions = async () => {
     reserved: false,
   }));
 
-  console.log(response);
   return response;
 };
 

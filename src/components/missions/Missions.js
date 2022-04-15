@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 import MissionSkeleton from './MissionSkeleton';
+import './missions.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missionReducer, shallowEqual);
