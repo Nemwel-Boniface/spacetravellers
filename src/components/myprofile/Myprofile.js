@@ -15,7 +15,7 @@ const Myprofile = () => {
   }, []);
   return (
     <div className="myProfile">
-      <section className="my-missions">
+      <section className="my-rockets">
         <h2>My Mission</h2>
         <ul className="reservedCont">
           { missions.map((mission) => (mission.reserved === true ? (
@@ -25,7 +25,6 @@ const Myprofile = () => {
               {' '}
             </li>
           ) : null))}
-          ;
         </ul>
       </section>
       <section className="my-rockets">

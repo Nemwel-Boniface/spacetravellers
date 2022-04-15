@@ -42,8 +42,7 @@ const missionReducer = (state = initialState, action) => {
           : { ...mission, reserved: false }))];
     case POPULATE_MISSIONS_PROFILE:
       return [
-        ...state.filter((mission) => mission.reserved === true),
-        ...state.filter((mission) => mission.reserved === false),
+        ...state,
       ];
     default:
       return state;

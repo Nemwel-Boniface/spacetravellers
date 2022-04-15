@@ -26,6 +26,7 @@ describe('A tests for my Rockets component', () => {
         />
       </Provider>,
     );
+
     expect(rocketTree).toMatchSnapshot();
   });
 
@@ -36,6 +37,7 @@ describe('A tests for my Rockets component', () => {
         <Rockets rockets={rockets} />
       </Provider>,
     );
+
     expect(rocketTree).toMatchSnapshot();
   });
 });

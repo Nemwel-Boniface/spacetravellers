@@ -41,7 +41,42 @@
   color: white;
 }
 
+.border {
+  padding-top: 40%;
+  padding-bottom: 40%;
+}
+
 .status,
-.mission-status {
+.border {
   border-right: 1px solid #aaa;
+}
+
+.mission-button {
+  background: white;
+  color: #aaa;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  width: 80%;
+  margin: auto;
+  height: 40px;
+  padding: 2px;
+}
+
+.leave {
+  color: red;
+  border: 1px solid red;
+}
+
+.mission-status {
+  background: #676666;
+  color: white;
+  border-radius: 4px;
+  width: 80%;
+  margin: auto;
+  padding: 0 0 2px 0;
+  text-align: center;
+}
+
+.member {
+  background: rgb(0, 156, 246);
 }
