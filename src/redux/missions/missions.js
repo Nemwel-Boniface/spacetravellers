@@ -9,7 +9,7 @@ const LoadMissions = () => (dispatch) => {
   });
 };
 
-const joinMission = (id) => ({
+const JoinMission = (id) => ({
   type: JOIN_MISSIONS,
   payload: id,
 });
@@ -29,5 +29,5 @@ const missionReducer = (state = initialState, action) => {
   }
 };
 
-export { LoadMissions };
+export { LoadMissions, JoinMission };
 export default missionReducer;
