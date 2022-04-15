@@ -28,7 +28,7 @@ Enjoy!
 ## Live Demo
 
 This project was deployed to two places:
-- [Netlify]() none at the moment
+- [Netlify](https://sweet-selkie-45eae3.netlify.app/)
 - [Heroku]() none at the moment
 
 
@@ -45,7 +45,11 @@ Locate the directory in your file explorer
 
 Install npm or if installed already using this link
 
+`npm install`
+
 Start the web dev server depending on your configuration
+
+`npm start`
 
 The Project should now be live on your browser
 
@@ -58,7 +62,8 @@ To run your tests you can run:
 ## Authors
 
 👤 **Author1**
-To run your tests you can run:
+
+- GitHub: [@Nemwel-Boniface ](https://github.com/Nemwel-Boniface)
 - Twitter: [@nemwel_bonie](https://twitter.com/nemwel_bonie)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nemwel-nyandoro-aa1b2620b/)
 
@@ -72,4 +77,10 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/Nemwel-Boniface/spacetravellers/issues).
 
+
 ## Show your support
+
+Give a ⭐️ if you like this project!
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
