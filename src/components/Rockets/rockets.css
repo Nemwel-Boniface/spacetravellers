@@ -1,7 +1,7 @@
 /* Will contain styling for the rockets component */
 
 .rocket {
-  margin: 4% 0;
+  margin: 4% 10%;
   display: flex;
   gap: 30px;
 }
