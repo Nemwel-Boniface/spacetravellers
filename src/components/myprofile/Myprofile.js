@@ -18,9 +18,14 @@ const Myprofile = () => {
       <section className="my-missions">
         <h2>My Mission</h2>
         <ul className="reservedCont">
-          {missions.map((mission) => (
-            <li className="reservedItem" key={mission.id}>{mission.name}</li>
-          ))}
+          { missions.map((mission) => (mission.reserved === true ? (
+            <li className="reservedItem" key={mission.id}>
+              {' '}
+              {mission.name}
+              {' '}
+            </li>
+          ) : null))}
+          ;
         </ul>
       </section>
       <section className="my-rockets">
