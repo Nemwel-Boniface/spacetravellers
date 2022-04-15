@@ -39,5 +39,5 @@ const missionReducer = (state = initialState, action) => {
   }
 };
 
-export { LoadMissions, JoinMission };
+export { LoadMissions, JoinMission, LeaveMission };
 export default missionReducer;
