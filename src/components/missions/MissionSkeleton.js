@@ -19,9 +19,9 @@ const MissionSkeleton = ({
           <p className="mission-description">
             {description}
           </p>
-          <p className="mission-status">
+          <span className="mission-status">
             Not a member
-          </p>
+          </span>
           <button type="button" id={id} onClick={missionParticipation} className="mission-button">Join mission</button>
         </div>
       ) : (
@@ -30,10 +30,10 @@ const MissionSkeleton = ({
           <p className="mission-description">
             {description}
           </p>
-          <p className="mission-status">
+          <p className="mission-status member">
             Active Member
           </p>
-          <button type="button" id={id} onClick={missionParticipation} className="mission-button">Leave mission</button>
+          <button type="button" id={id} onClick={missionParticipation} className="mission-button leave">Leave mission</button>
         </div>
       )}
     </>
