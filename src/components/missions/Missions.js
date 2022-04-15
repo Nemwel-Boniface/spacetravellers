@@ -20,6 +20,7 @@ const Missions = () => {
           name={mission.name}
           description={mission.description}
           status={mission.reserved}
+          id={mission.id}
         />
       ))}
     </div>
