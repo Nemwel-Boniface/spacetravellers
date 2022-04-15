@@ -4,8 +4,8 @@ import renderer from 'react-test-renderer';
 import store from '../redux/configStore';
 import Missions from '../components/missions/missions';
 
-describe('A tests for my Rockets component', () => {
-  it('Check whether Rockets component renders', () => {
+describe('A tests for my missions component', () => {
+  it('Check whether mission component renders', () => {
     const mission = {
       id: 1,
       name: 'Thaicom',
@@ -26,7 +26,7 @@ describe('A tests for my Rockets component', () => {
     expect(missionTree).toMatchSnapshot();
   });
 
-  it('We now check whether it renders the rockets correctly', () => {
+  it('We now check whether it renders the mission correctly', () => {
     const missionTree = renderer.create(
       <Provider store={store}>
         <Missions />
