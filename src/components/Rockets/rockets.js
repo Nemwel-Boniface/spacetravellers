@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Proptypes from 'prop-types';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { getRocketFromAPI } from '../../redux/Rockets/rockets';
 import Rocket from './Rocket';
 
-const Rockets = (props) => {
-  const { rockets } = props;
+const Rockets = () => {
+  const rockets = useSelector((state) => state.RocketsReducer, shallowEqual);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getRocketFromAPI());
+  }, []);
   return (
     <div className="rockets">
       <ul>
