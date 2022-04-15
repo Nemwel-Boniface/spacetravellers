@@ -1,9 +1,9 @@
-import React from "react";
-import { Provider } from "react-redux";
+import React from 'react';
+import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import store from '../redux/configStore';
 import Rockets from '../components/Rockets/rockets';
-import Rocket from "../components/Rockets/Rocket";
+import Rocket from '../components/Rockets/Rocket';
 
 describe('A tests for my Rockets component', () => {
   it('Check whether Rockets component renders', () => {
@@ -24,18 +24,18 @@ describe('A tests for my Rockets component', () => {
           name={rocket.name}
           reserved={rocket.reserved}
         />
-      </Provider>
+      </Provider>,
     );
     expect(rocketTree).toMatchSnapshot();
   });
 
   it('We now check whether it renders the rockets correctly', () => {
-    let rockets = [];
+    const rockets = [];
     const rocketTree = renderer.create(
       <Provider store={store}>
-        <Rockets rockets={rockets}/>
-      </Provider>
-    )
+        <Rockets rockets={rockets} />
+      </Provider>,
+    );
     expect(rocketTree).toMatchSnapshot();
-  })
-})
+  });
+});
