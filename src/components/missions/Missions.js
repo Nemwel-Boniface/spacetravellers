@@ -9,10 +9,10 @@ const Missions = () => {
     <div className="super-mission">
       {missions.map((mission) => (
         <MissionSkeleton
-          key={mission.mission_id}
-          name={mission.mission_name}
-          description={mission.mission_description}
-          status={mission.mission_status}
+          key={mission.id}
+          name={mission.name}
+          description={mission.description}
+          status={mission.reserved}
         />
       ))}
     </div>

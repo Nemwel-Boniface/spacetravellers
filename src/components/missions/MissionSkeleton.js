@@ -1,6 +1,7 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 
-const MissionSkeleton = (name, description, status) => (
+const MissionSkeleton = ({ name, description, status }) => (
   <div className="mission-table">
     <h2>{name}</h2>
     <div className="mission-description">
@@ -10,5 +11,11 @@ const MissionSkeleton = (name, description, status) => (
     <button type="button" className="mission-button">Join mission</button>
   </div>
 );
+
+MissionSkeleton.propTypes = {
+  name: Proptypes.string.isRequired,
+  description: Proptypes.string.isRequired,
+  status: Proptypes.bool.isRequired,
+};
 
 export default MissionSkeleton;
