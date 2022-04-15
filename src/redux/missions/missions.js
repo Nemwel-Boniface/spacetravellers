@@ -2,6 +2,7 @@ import fetchMissions from '../../components/var_api/var_api';
 
 const LOAD_MISSIONS = 'spacetravellers/missions/missions';
 const JOIN_MISSIONS = 'spacetravellers/missions/joinMissions';
+const LEAVE_MISSIONS = 'spacetravellers/missions/leaveMissions';
 
 const LoadMissions = () => (dispatch) => {
   fetchMissions().then((mission) => {
