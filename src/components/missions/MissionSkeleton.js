@@ -10,11 +10,11 @@ const MissionSkeleton = ({
   const dispatch = useDispatch();
 
   const missionParticipation = () => (
-    status ? dispatch(JoinMission(id)) : dispatch(LeaveMission(id)));
+    (status === false) ? dispatch(JoinMission(id)) : dispatch(LeaveMission(id)));
   return (
     <>
-      { (!status) ? (
-        <div className="mission-table">
+      { (status === false) ? (
+        <div id={id} className="mission-table">
           <h2>{name}</h2>
           <p className="mission-description">
             {description}
@@ -27,7 +27,7 @@ const MissionSkeleton = ({
           <button type="button" id={id} onClick={missionParticipation} className="mission-button">Join mission</button>
         </div>
       ) : (
-        <div className="mission-table">
+        <div id={id} className="mission-table">
           <h2>{name}</h2>
           <p className="mission-description">
             {description}
