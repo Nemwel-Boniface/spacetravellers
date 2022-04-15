@@ -3,13 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import Populateprofile from '../populateprofile/Populateprofile';
 import './myprofile.css';
 import { addRocketToMyProfile } from '../../redux/Rockets/rockets';
+import { PopulateMissionProfile } from ''
 
 const Myprofile = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.RocketsReducer);
+  const missions = useSelector((state) => state.missionReducer);
 
   useEffect(() => {
     dispatch(addRocketToMyProfile());
+    dispatch(PopulateMissionProfile());
   }, []);
   return (
     <div className="myProfile">
