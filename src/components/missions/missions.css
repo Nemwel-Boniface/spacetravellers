@@ -41,8 +41,13 @@
   color: white;
 }
 
+.border {
+  padding-top: 40%;
+  padding-bottom: 40%;
+}
+
 .status,
-.mission-status {
+.border {
   border-right: 1px solid #aaa;
 }
 
@@ -75,4 +80,3 @@
 .member {
   background: rgb(0, 156, 246);
 }
-

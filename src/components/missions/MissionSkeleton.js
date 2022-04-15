@@ -19,9 +19,11 @@ const MissionSkeleton = ({
           <p className="mission-description">
             {description}
           </p>
-          <span className="mission-status">
-            Not a member
-          </span>
+          <div className="border">
+            <span className="mission-status">
+              Not a member
+            </span>
+          </div>
           <button type="button" id={id} onClick={missionParticipation} className="mission-button">Join mission</button>
         </div>
       ) : (
