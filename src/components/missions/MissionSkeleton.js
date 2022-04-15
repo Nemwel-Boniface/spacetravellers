@@ -25,7 +25,7 @@ const MissionSkeleton = ({
         {status}
       </p>
       <button type="button" id={id} onClick={missionParticipation} className="mission-button">Join mission</button>
-    </div>) : null ( 
+    </div>) : ( 
     <div className="mission-table">
       <h2>{name}</h2>
       <p className="mission-description">
