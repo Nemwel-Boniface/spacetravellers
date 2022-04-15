@@ -32,3 +32,11 @@ exports[`A tests for my Rockets component Check whether Rockets component render
   </div>
 </div>
 `;
+
+exports[`A tests for my Rockets component We now check whether it renders the rockets correctly 1`] = `
+<div
+  className="rockets"
+>
+  <ul />
+</div>
+`;

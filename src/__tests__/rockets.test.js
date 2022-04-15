@@ -29,5 +29,13 @@ describe('A tests for my Rockets component', () => {
     expect(rocketTree).toMatchSnapshot();
   });
 
-
+  it('We now check whether it renders the rockets correctly', () => {
+    let rockets = [];
+    const rocketTree = renderer.create(
+      <Provider store={store}>
+        <Rockets rockets={rockets}/>
+      </Provider>
+    )
+    expect(rocketTree).toMatchSnapshot();
+  })
 })
