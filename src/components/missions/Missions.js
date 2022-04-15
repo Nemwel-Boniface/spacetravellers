@@ -8,6 +8,12 @@ const Missions = () => {
 
   return (
     <div className="super-mission">
+      <div className="header-container">
+        <p>Mission</p>
+        <p>Description</p>
+        <p>Status</p>
+        <p className="join">JOin</p>
+      </div>
       {missions.map((mission) => (
         <MissionSkeleton
           key={mission.id}
