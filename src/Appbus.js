@@ -1,7 +1,7 @@
 import React from 'react';
 import MyProfile from './components/myprofile/Myprofile';
 
-function Appprofile() {
+const Appprofile = () => {
   return (
     <MyProfile />
   );

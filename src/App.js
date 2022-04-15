@@ -7,7 +7,7 @@ import Header from './components/header/Header';
 import { getRocketFromAPI } from './redux/Rockets/rockets';
 import Appmissions from './Appmissions';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.RocketsReducer, shallowEqual);
   useEffect(() => {

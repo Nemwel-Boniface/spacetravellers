@@ -3,7 +3,7 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import Rockets from './components/Rockets/rockets';
 import { getRocketFromAPI } from './redux/Rockets/rockets';
 
-function Appjus() {
+const Appjus = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.RocketsReducer, shallowEqual);
   useEffect(() => {
