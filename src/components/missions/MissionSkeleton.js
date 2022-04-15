@@ -9,9 +9,8 @@ const MissionSkeleton = ({
 }) => {
   const dispatch = useDispatch();
 
-  const missionParticipation = () => {
-    !mission.reserved ? dispatch(JoinMission(id)) : null;
-  };
+  const missionParticipation = () => (
+    status ? dispatch(JoinMission(id)) : dispatch(LeaveMission(id)));
   return (
     <div className="mission-table">
       <h2>{name}</h2>
