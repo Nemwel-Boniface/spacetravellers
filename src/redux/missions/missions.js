@@ -15,6 +15,11 @@ const JoinMission = (id) => ({
   payload: id,
 });
 
+const LeaveMission = (id) => ({
+  type: LEAVE_MISSIONS,
+  payload: id,
+});
+
 const initialState = [];
 
 const missionReducer = (state = initialState, action) => {
@@ -25,6 +30,10 @@ const missionReducer = (state = initialState, action) => {
       return [
         ...state.map((mission) => (mission.id !== action.payload ? mission
           : { ...mission, reserved: true }))];
+    case LEAVE_MISSIONS:
+      return [
+        ...state.map((mission) => (mission.id !== action.payload ? mission
+          : { ...mission, reserved: false }))];
     default:
       return state;
   }
