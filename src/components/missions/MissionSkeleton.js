@@ -21,8 +21,6 @@ const MissionSkeleton = ({
           </p>
           <p className="mission-status">
             Not a member
-            {' '}
-            {status}
           </p>
           <button type="button" id={id} onClick={missionParticipation} className="mission-button">Join mission</button>
         </div>
@@ -34,13 +32,10 @@ const MissionSkeleton = ({
           </p>
           <p className="mission-status">
             Active Member
-            {' '}
-            {status}
           </p>
           <button type="button" id={id} onClick={missionParticipation} className="mission-button">Leave mission</button>
         </div>
       )}
-      ;
     </>
   );
 };
