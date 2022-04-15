@@ -1,5 +1,6 @@
 import React from 'react';
 import Proptypes from 'prop-types';
+import './missions.css';
 
 const MissionSkeleton = ({ name, description, status }) => (
   <div className="mission-table">
