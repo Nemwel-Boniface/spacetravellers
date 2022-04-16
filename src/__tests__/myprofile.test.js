@@ -10,6 +10,5 @@ it('This is a test to check the My Profile page', () => {
       <MyProfile />
     </Provider>,
   );
-
   expect(tree).toMatchSnapshot();
 });
