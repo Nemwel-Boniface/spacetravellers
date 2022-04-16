@@ -24,7 +24,7 @@ const RocketsReducer = (state = initialRockets, action) => {
       ];
     case actions.ADDROCKETNAME:
       return [
-        ...state.filter((rocket) => rocket.reserved === true),
+        ...state,
       ];
     default:
       return state;

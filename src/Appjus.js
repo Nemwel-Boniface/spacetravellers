@@ -15,6 +15,6 @@ const Appjus = () => {
       <Rockets rockets={rockets} />
     </div>
   );
-}
+};
 
 export default Appjus;

@@ -30,8 +30,8 @@ const Myprofile = () => {
       <section className="my-rockets">
         <h2>My Rockets</h2>
         <ul className="reservedCont">
-          {rockets.map((rocket) => (
-            <li className="reservedItem" key={rocket.id}>{rocket.name}</li>
+          {rockets.map((rocket) => (rocket.reserved === true
+            ? (<li className="reservedItem" key={rocket.id}>{rocket.name}</li>) : null
           ))}
         </ul>
       </section>

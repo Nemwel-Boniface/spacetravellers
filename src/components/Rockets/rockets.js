@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Proptypes from 'prop-types';
+// import Proptypes from 'prop-types';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { getRocketFromAPI } from '../../redux/Rockets/rockets';
 import Rocket from './Rocket';
@@ -8,11 +8,11 @@ const Rockets = () => {
   const rockets = useSelector((state) => state.RocketsReducer, shallowEqual);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getRocketFromAPI());
+    if (document.querySelector('.roch').children.length === 0) dispatch(getRocketFromAPI());
   }, []);
   return (
     <div className="rockets">
-      <ul>
+      <ul className="roch">
         {rockets.map((rocket) => (
           <Rocket
             key={rocket.id}
@@ -27,9 +27,9 @@ const Rockets = () => {
     </div>
   );
 };
-Rockets.propTypes = {
-  rockets: Proptypes.arrayOf(
-    Proptypes.shape({}),
-  ).isRequired,
-};
+// Rockets.propTypes = {
+//   rockets: Proptypes.arrayOf(
+//     Proptypes.shape({}),
+//   ).isRequired,
+// };
 export default Rockets;
