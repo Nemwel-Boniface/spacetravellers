@@ -27,11 +27,6 @@ Enjoy!
 
 ## Live Demo
 
-This project was deployed to two places:
-- [Netlify](https://sweet-selkie-45eae3.netlify.app/)
-- [Heroku]() none at the moment
-
-
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
 
