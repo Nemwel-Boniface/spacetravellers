@@ -1,0 +1,21 @@
+.myProfile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+}
+
+.my-rockets {
+  width: 80%;
+}
+
+.my-rockets ul {
+  display: block;
+  border: 1px solid #aaa;
+}
+
+.my-rockets ul li {
+  list-style-type: none;
+  padding: 20px 20px;
+  border-bottom: 1px solid #aaa;
+}

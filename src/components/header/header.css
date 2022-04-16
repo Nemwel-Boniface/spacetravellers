@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 10%;
+  height: 100px;
+}
+
+#logo {
+  display: flex;
+}
+
+#logo span {
+  margin: auto 15px;
+  font-size: 24px;
+  font-weight: bold;
+}

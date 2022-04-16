@@ -1,0 +1,82 @@
+/* mission files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: white;
+}
+
+.super-mission {
+  display: grid;
+  width: 90%;
+  margin: auto;
+  border: 1px solid #aaa;
+}
+
+.mission-table,
+.header-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 10% 70% 10% 10%;
+  text-align: left;
+}
+
+.mission-table > * {
+  border-top: 1px solid #aaa;
+  padding: 10px 10px;
+}
+
+.mission-description,
+.hola {
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+}
+
+.header-container > * {
+  padding: 5px 0 5px 10px;
+  border-top: 1px solid #aaa;
+}
+
+.join {
+  color: white;
+}
+
+.border {
+  padding-top: 40%;
+  padding-bottom: 40%;
+}
+
+.status,
+.border {
+  border-right: 1px solid #aaa;
+}
+
+.mission-button {
+  background: white;
+  color: #aaa;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  width: 80%;
+  margin: auto;
+  height: 40px;
+  padding: 2px;
+}
+
+.leave {
+  color: red;
+  border: 1px solid red;
+}
+
+.mission-status {
+  background: #676666;
+  color: white;
+  border-radius: 4px;
+  width: 80%;
+  margin: auto;
+  padding: 0 0 2px 0;
+  text-align: center;
+}
+
+.member {
+  background: rgb(0, 156, 246);
+}
